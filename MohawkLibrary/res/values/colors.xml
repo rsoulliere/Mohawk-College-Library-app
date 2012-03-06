@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <color name="moh_grey">#53534A</color>
+  <color name="moh_burgandy">#990033</color>
+   <color name="moh_crimson">#B20838</color>
+    <color name="moh_orange">#F58220</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

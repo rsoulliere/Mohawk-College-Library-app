@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+     
+   
+    <item android:id="@+id/search"
+          android:title="@string/search"
+          android:icon="@drawable/searchopac"
+          android:showAsAction="always"  
+         >
+          
+        <menu>
+            <item android:id="@+id/opacSearch"
+        		android:title="@string/opacSearch"
+        		android:icon="@drawable/searchopac"
+         	 />
+
+     		<item android:id="@+id/articleSearch"
+         		 android:title="@string/articleSearch"
+          		android:icon="@drawable/searcharticles"
+          	/>
+        </menu>
+        
+       </item>
+    
+    
+    <item android:id="@+id/chat"
+          android:title="@string/chat"
+          android:icon="@drawable/chaticon"
+          android:textSize="5pt"
+           android:showAsAction="always"  
+          
+          />
+    
+     <item android:id="@+id/news"
+          android:title="@string/news"
+          android:icon="@drawable/news"
+          android:showAsAction="always"  
+          >
+        <menu>
+            <item 
+                android:id="@+id/brainblog"
+      		   	android:title="@string/brainblog"
+          	/>
+         	<item 
+         	    android:id="@+id/collabblog"
+         		android:title="@string/collabblog"
+          	/>
+      
+       </menu>
+       </item>
+     
+        <item android:id="@+id/room_reserve"
+          android:title="@string/room_reserve"
+          android:icon="@drawable/bookaspace"
+           android:textSize="2pt"
+           android:showAsAction="always"   
+          />
+        
+         <item android:id="@+id/about"
+          android:title="@string/about"
+          android:showAsAction="never"  
+         />
+        
+         
+    </menu>
+
+
