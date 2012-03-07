@@ -1,5 +1,7 @@
 package com.rs.MohawkLibrary;
 
+import com.flurry.android.FlurryAgent;
+
 import android.os.Bundle;
 //import android.support.v4.app.FragmentActivity;
 import android.view.KeyEvent;
@@ -9,7 +11,7 @@ import android.view.MenuItem;
 //import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
- import android.app.Activity;
+import android.app.Activity;
 //import android.app.ActionBar;
 
 
@@ -112,7 +114,19 @@ public class MohawkLibrary extends Activity{
         return super.onKeyDown(keyCode, event);
     }
     
-   
+    public void onStart()
+    {
+       super.onStart();
+       FlurryAgent.onStartSession(this, "HMCFZISWNNVAD1QI2RV3");
+       // your code
+    }
+    
+    public void onStop()
+    {
+       super.onStop();
+       FlurryAgent.onEndSession(this);
+       // your code
+    }
     
   //  private class MohawkWebViewClient extends WebViewClient {
  //       @Override
