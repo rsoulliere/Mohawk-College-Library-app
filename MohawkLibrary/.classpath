@@ -10,5 +10,6 @@
 			<attribute name="javadoc_location" value="file:/home/rsoulliere/Applications/android-sdk-linux_x86/add-ons/addon_google_apis_google_inc_8/docs/reference"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/home/rsoulliere/workspace/flurry/FlurryAgent.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

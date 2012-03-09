@@ -11,8 +11,8 @@
       <string name="contact">Contacts</string>
       <string name="room_reserve">Book a Space</string>
       <string name="twitter">twitter</string>
-        <string name="brainblog">BRAINblog</string>
-        <string name="collabblog">Collaboratory Blog</string>
+        <string name="brainblog">Library News</string>
+        <string name="collabblog">Collaboratory News</string>
          <string name="about">About this Application</string>
       <string name="copyright">Mohawk College Library \n Version 0.5  \n Written by Robert Soulliere \n Copyright 2012, Mohawk College</string>
 </resources>

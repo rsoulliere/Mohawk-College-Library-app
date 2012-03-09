@@ -58,6 +58,7 @@
         
          <item android:id="@+id/about"
           android:title="@string/about"
+          android:icon="@drawable/aboutapp"
           android:showAsAction="never"  
          />
         
