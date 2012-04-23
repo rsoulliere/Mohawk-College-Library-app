@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Mohawk College Library</string>
-    <string name="home">Home/About this application</string>
      <string name="search">Find</string>
     <string name="opacSearch">Find Books and Videos</string>
      <string name="articleSearch">Find Journal Articles</string>
-      <string name="viewMap">Locations</string>
        <string name="news">Library News</string>
       <string name="chat">Chat</string>
-      <string name="contact">Contacts</string>
       <string name="room_reserve">Book a Space</string>
-      <string name="twitter">twitter</string>
         <string name="brainblog">Library News</string>
         <string name="collabblog">Collaboratory News</string>
          <string name="about">About this Application</string>
-      <string name="copyright">Mohawk College Library \n Version 0.5  \n Written by Robert Soulliere \n Copyright 2012, Mohawk College</string>
 </resources>
