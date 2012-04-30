@@ -20,19 +20,21 @@ public final class R {
     }
     public static final class drawable {
         public static final int aboutapp=0x7f020000;
-        public static final int book=0x7f020001;
-        public static final int bookaspace=0x7f020002;
-        public static final int chat=0x7f020003;
-        public static final int chaticon=0x7f020004;
-        public static final int library=0x7f020005;
-        public static final int magnifying_glass=0x7f020006;
-        public static final int mohawk_chat=0x7f020007;
-        public static final int mohawk_maps=0x7f020008;
-        public static final int mohawk_news=0x7f020009;
-        public static final int news=0x7f02000a;
-        public static final int news_icon=0x7f02000b;
-        public static final int searcharticles=0x7f02000c;
-        public static final int searchopac=0x7f02000d;
+        public static final int bgwhite2x=0x7f020001;
+        public static final int book=0x7f020002;
+        public static final int bookaspace=0x7f020003;
+        public static final int chat=0x7f020004;
+        public static final int chaticon=0x7f020005;
+        public static final int infobg2x=0x7f020006;
+        public static final int library=0x7f020007;
+        public static final int magnifying_glass=0x7f020008;
+        public static final int mohawk_chat=0x7f020009;
+        public static final int mohawk_maps=0x7f02000a;
+        public static final int mohawk_news=0x7f02000b;
+        public static final int news=0x7f02000c;
+        public static final int news_icon=0x7f02000d;
+        public static final int searcharticles=0x7f02000e;
+        public static final int searchopac=0x7f02000f;
     }
     public static final class id {
         public static final int about=0x7f060008;
@@ -40,16 +42,18 @@ public final class R {
         public static final int brainblog=0x7f060005;
         public static final int chat=0x7f060003;
         public static final int collabblog=0x7f060006;
+        public static final int mapview=0x7f060009;
         public static final int news=0x7f060004;
         public static final int opacSearch=0x7f060001;
         public static final int room_reserve=0x7f060007;
         public static final int search=0x7f060000;
-        public static final int webview=0x7f060009;
+        public static final int webview=0x7f06000a;
     }
     public static final class layout {
         public static final int main=0x7f030000;
         public static final int main_menu=0x7f030001;
-        public static final int webview=0x7f030002;
+        public static final int map=0x7f030002;
+        public static final int webview=0x7f030003;
     }
     public static final class string {
         public static final int about=0x7f050009;
