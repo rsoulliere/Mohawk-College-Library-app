@@ -1,18 +1,16 @@
 package com.rs.MohawkLibrary;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+import android.view.View;
+import android.webkit.WebChromeClient.CustomViewCallback;
 
 public class MenuActivity extends Activity{
 
-
+	
    
 	 @Override
 		public boolean onCreateOptionsMenu(Menu menu) {
@@ -23,10 +21,7 @@ public class MenuActivity extends Activity{
 		
 	    @Override
 		public boolean onOptionsItemSelected(MenuItem item) {
-	    	
-	    	 WebView myWebView = (WebView) findViewById(R.id.webview);
-	         myWebView.getSettings().setJavaScriptEnabled(true);
-	         myWebView.setWebViewClient(new WebViewClient());	
+	    		
 	         Intent intent;
 	    	switch (item.getItemId()) {
 		    	
@@ -88,5 +83,12 @@ public class MenuActivity extends Activity{
 		    }
 	    	return true;
 		}
+
+		public void onShowCustomView(View view, CustomViewCallback callback) {
+			// TODO Auto-generated method stub
+			
+		}
+	    
+	  
 	
 }

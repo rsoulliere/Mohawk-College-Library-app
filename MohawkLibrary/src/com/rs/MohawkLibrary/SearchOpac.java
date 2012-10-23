@@ -1,15 +1,25 @@
 package com.rs.MohawkLibrary;
 
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Window;
 import android.webkit.WebChromeClient;
+import android.webkit.WebChromeClient.CustomViewCallback;
+import android.webkit.WebSettings;
+import android.webkit.WebSettings.PluginState;
+import android.webkit.WebSettings.RenderPriority;
 import android.webkit.WebView;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
+import android.widget.VideoView;
 import android.webkit.WebViewClient;
 
 public class SearchOpac  extends MenuActivity {
@@ -18,7 +28,8 @@ public class SearchOpac  extends MenuActivity {
 	public final static String SEARCH_SCOPE = "keyword";
 	public final static String SEARCH_LOCATION = "1";
 	public final static String SEARCH_FORMAT = "";
-	public WebView opacWebView;
+
+	 WebView myWebView;
 	
 	final Activity activity = this;
 	
@@ -26,10 +37,10 @@ public class SearchOpac  extends MenuActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.getWindow().requestFeature(Window.FEATURE_PROGRESS);
-        setContentView(R.layout.search_opac);        
+        setContentView(R.layout.search_opac);   
+       
     }
   
-    
   
     /** Called when the user clicks the Send button */
     public void sendMessage(View view) {
@@ -49,14 +60,17 @@ public class SearchOpac  extends MenuActivity {
  				.concat("&locg=").concat(location);
  		 
          searchURL = searchURL.concat(searchParams);
-         opacWebView = (WebView) findViewById(R.id.webview);
-         opacWebView.setInitialScale(100);
+       
+         myWebView = (WebView) findViewById(R.id.webview);
+         myWebView.setInitialScale(100);
      //    myWebView.setWebViewClient(new InnerWebViewClient()); // forces it to open in app
        
          
-         opacWebView.getSettings().setJavaScriptEnabled(true);
-         opacWebView.setWebChromeClient(new WebChromeClient() {
-           	
+         myWebView.getSettings().setJavaScriptEnabled(true);
+         myWebView.getSettings().setPluginsEnabled(true);
+         myWebView.setWebChromeClient(new WebChromeClient() {
+        	 
+        	 
         	   public void onProgressChanged(WebView view, int progress) {
         		  activity.setTitle("Loading...");
                activity.setProgress(progress * 100);
@@ -68,7 +82,7 @@ public class SearchOpac  extends MenuActivity {
          
 
          /* To ensure links open within the application */
-         opacWebView.setWebViewClient(new WebViewClient() {
+         myWebView.setWebViewClient(new WebViewClient() {
        	  public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
        		Toast.makeText(activity, "Oh no! " + description, Toast.LENGTH_SHORT).show();
        	  }  
@@ -78,10 +92,14 @@ public class SearchOpac  extends MenuActivity {
               view.loadUrl(url);
               return true;
           }
+       	 
+       	
+
        		   });     
          
-         opacWebView.loadUrl(searchURL); 
+         myWebView.loadUrl(searchURL); 
     }
+
     
     /** Called when the user clicks the Send button */
     public void clearForm(View view) {
@@ -95,11 +113,10 @@ public class SearchOpac  extends MenuActivity {
     	format_spinner.setSelection(0); 
     }
     
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
+    public boolean onKeyDown(int keyCode, KeyEvent event, WebView view) {
         // Check if the key event was the Back button and if there's history
-        if ((keyCode == KeyEvent.KEYCODE_BACK) && opacWebView.canGoBack()) {
-            opacWebView.goBack();
+        if ((keyCode == KeyEvent.KEYCODE_BACK) && myWebView.canGoBack()) {
+        	myWebView.goBack();
             return true;
         }
         // If it wasn't the Back key or there's no web page history, bubble up to the default
