@@ -9,5 +9,66 @@
       <string name="room_reserve">Book a Space</string>
         <string name="brainblog">Library News</string>
         <string name="collabblog">Collaboratory News</string>
+         <string name="search_term">Enter search</string>
+         <string name="button_search">Search</string>
+         <string name="button_go">Go!</string>
+         <string name="libraryHours">Library Hours</string>
+       <string name="button_clear">Clear</string>
          <string name="about">About this Application</string>
+     
+     <string-array name="search_scope">
+        <item>keyword</item>
+        <item>title</item>
+        <item>author</item>
+        <item>subject</item>
+        <item>series</item>
+    </string-array>
+  
+     
+	<string-array name="location_names">
+        <item>all locations</item>
+        <item>BPL</item>
+        <item>Brantford</item>
+        <item>Fennell</item>
+        <item>IAHS</item>
+        <item>STAART</item>
+    </string-array>
+    
+    <string-array name="location_codes">
+        <item>1</item>
+        <item>105</item>
+        <item>104</item>
+        <item>101</item>
+        <item>102</item>
+        <item>103</item>
+    </string-array>
+    
+    <string-array name="formatnames">
+       <item>All formats</item>
+        <item>Books</item>
+        <item>Music CDs</item>
+        <item>Online resources</item>
+        <item>Videos</item>
+    </string-array>
+   
+  
+    
+    <string-array name="format_codes">
+       <item> </item>
+        <item>a</item>
+        <item>j</item>
+        <item>m</item>
+        <item>g</item>
+    </string-array>
+    
+      <string-array name="article_search_sites">
+        <item>Please Select</item>
+        <item>Academic Search Premiere</item>
+        <item>Business Source Premiere</item>
+        <item>Health Source: Nursing/Academic Edition</item>
+        <item>MasterFILE Elite</item>
+        <item>Computers and Applied Sciences Complete</item>
+        <item>Other Mobile databases</item>
+    </string-array>
+    
 </resources>

@@ -4,7 +4,7 @@
       android:versionCode="1"
       android:versionName="1.0" >
       
-    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="15"/>
+    <uses-sdk android:minSdkVersion="12" android:targetSdkVersion="15"/>
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> 
 
@@ -23,8 +23,44 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
-        
+       
+        <activity
+            android:name=".SearchOpac"
+            android:label="@string/opacSearch" 
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            >
+        </activity>
+         <activity
+            android:name=".ArticleSearch"
+            android:label="@string/articleSearch" 
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            >
+        </activity>
+             <activity
+            android:name=".LibraryChat"
+            android:label="@string/chat" 
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            >
+        </activity>
+         <activity android:name=".RoomReserve"
+                android:label="@string/room_reserve" 
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            ></activity>
+         <activity android:name=".BrainBlog"
+                android:label="@string/brainblog" 
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            ></activity>
+             <activity android:name=".CollabBlog"
+                android:label="@string/collabblog" 
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            ></activity>
+       
+         <activity android:name=".HoursView"
+                android:label="@string/libraryHours" 
+            android:configChanges="keyboardHidden|orientation|screenSize"
+             
+            ></activity>
+         
             
     </application>
 </manifest>

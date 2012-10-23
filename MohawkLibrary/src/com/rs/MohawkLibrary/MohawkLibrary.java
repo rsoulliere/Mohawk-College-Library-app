@@ -11,7 +11,10 @@ import android.view.MenuItem;
 //import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.annotation.TargetApi;
+import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Intent;
 //import android.app.ActionBar;
 
 
@@ -23,11 +26,14 @@ public class MohawkLibrary extends Activity{
 //	  WebView myWebView;
 	
     /** Called when the activity is first created. */
-    @Override
+	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ActionBar actionBar = getActionBar();       
+       actionBar.setDisplayShowHomeEnabled(true);
         setContentView(R.layout.main);
         setContentView(R.layout.webview);
+       
       WebView myWebView = (WebView) findViewById(R.id.webview);
         myWebView.getSettings().setJavaScriptEnabled(true);
         myWebView.setInitialScale(100);
@@ -48,48 +54,54 @@ public class MohawkLibrary extends Activity{
     	 WebView myWebView = (WebView) findViewById(R.id.webview);
          myWebView.getSettings().setJavaScriptEnabled(true);
          myWebView.setWebViewClient(new WebViewClient());	
+         Intent intent;
     	switch (item.getItemId()) {
 	    	
     	case android.R.id.home:
-   		myWebView.setInitialScale(100);
-        	myWebView.loadUrl("file:///android_asset/welcome.html");
+   		intent = new Intent(this, MohawkLibrary.class);
+ 		startActivity(intent);
 	    	break;
 	    	
     	case R.id.opacSearch:
-    		myWebView.setInitialScale(100);
-        	myWebView.loadUrl("http://libcat.mohawkcollege.ca/opac/en-CA/extras/slimpac/mobile2.html");
+    		intent = new Intent(this, SearchOpac.class);
+    		startActivity(intent);
 	    	break;
 	    	
     	case R.id.articleSearch:
-    		myWebView.setInitialScale(100);
-        	myWebView.loadUrl("http://lib-wind.mohawkcollege.ca/mobile/databases.html");
-	    	break;
+    		intent = new Intent(this, ArticleSearch.class);
+     		startActivity(intent);
+ 	    	break;
 	    	
     	case R.id.room_reserve:
-    		myWebView.setInitialScale(50);
-    		myWebView.loadUrl("http://lib-drupal.mohawkcollege.ca/forms/Work/BookRoomMobile/mobile.php");
-    		break; 
+    		intent = new Intent(this, RoomReserve.class);
+     		startActivity(intent);
+ 	    	break;
 	    	
     	case R.id.brainblog:
-    		myWebView.setInitialScale(100);
-    		myWebView.loadUrl("http://librarybrainblog.wordpress.com");
-    		break; 
+    		intent = new Intent(this, BrainBlog.class);
+     		startActivity(intent);
+ 	    	break;
     		
     	case R.id.collabblog:
-    		myWebView.setInitialScale(75);
-    		myWebView.loadUrl("http://mohawkcollaboratory.tumblr.com/");
-    		break; 
+    		intent = new Intent(this, CollabBlog.class);
+    		startActivity(intent);
+	    	break;
     		
 
     	case R.id.chat:
-    		myWebView.setInitialScale(100);
-    		 myWebView.loadUrl("http://lib-wind.mohawkcollege.ca/Chat/library_mobile.html");
-	    	break;  	
+    		intent = new Intent(this, LibraryChat.class);
+    		startActivity(intent);
+	    	break;
+	    	
+    	case R.id.hours:
+    		intent = new Intent(this,HoursView.class);
+    		startActivity(intent);
+	    	break;  
 	    	
     	case R.id.about:
-    		myWebView.setInitialScale(100);
-    		 myWebView.loadUrl("file:///android_asset/welcome.html");
-	    	break;  
+    		intent = new Intent(this, MohawkLibrary.class);
+     		startActivity(intent);
+    	    	break;
  
 	    
   //  	case R.id.viewMap:

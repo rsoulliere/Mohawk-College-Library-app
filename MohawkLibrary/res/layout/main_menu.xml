@@ -56,6 +56,11 @@
            android:showAsAction="always"   
           />
         
+        <item android:id="@+id/hours"
+          android:title="@string/libraryHours"
+          android:showAsAction="never"  
+         />
+        
          <item android:id="@+id/about"
           android:title="@string/about"
           android:icon="@drawable/aboutapp"
