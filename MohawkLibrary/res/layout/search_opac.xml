@@ -3,87 +3,60 @@
     android:orientation="vertical" 
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-
-    
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content" 
-	android:orientation="vertical"
-	android:layout_alignParentTop="true"
-	android:id="@+id/search_form">
- 
- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="35dp" 
-	android:orientation="horizontal" >	
- 
-	<EditText android:id="@+id/edit_message"
-        android:layout_width="0px"
-     android:layout_weight="1"
-        android:layout_height="fill_parent"
-        android:hint="@string/search_term"
-        
-         />
 	
-	<Spinner
-        android:id="@+id/scope_select"
-           android:layout_width="wrap_content"
-              android:layout_height="fill_parent"
-        android:entries="@array/search_scope"
-         />
-		<Spinner
-        android:id="@+id/location"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:entries="@array/location_names"
-         />
-</LinearLayout>	
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="35dp" 
-	android:orientation="horizontal" >	
-	
-		
-		<Spinner
-        android:id="@+id/format"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:entries="@array/formatnames"
-        android:textSize="10px"
-         />
-		
-	
-	<Button
-       	 	
-       	 	android:layout_width="wrap_content"
-        	android:layout_height="fill_parent"
-       		android:text="@string/button_search" 
-       		android:textSize="10px"
-        	android:onClick="sendMessage" />
-	
-		<Button
-       	 	android:layout_width="wrap_content"
-        	android:layout_height="fill_parent"
-        	android:text="@string/button_clear" 
-        	android:textSize="10px"
-        	android:onClick="clearForm" />
-
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    xmlns:tools="http://schemas.android.com/tools"
+	    android:orientation="vertical"
+	    android:layout_alignParentTop="true"
+	    android:id="@+id/search_form">
+	    
+	    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	         xmlns:tools="http://schemas.android.com/tools"
+	         android:layout_width="fill_parent"
+	         android:layout_height="40dp" 
+	         android:orientation="horizontal" >	
+	         <EditText android:id="@+id/edit_message"
+	             android:layout_width="0px"
+	             android:layout_weight="1"
+	             android:layout_height="fill_parent"
+	             android:hint="@string/search_term" />
+	         <Spinner
+	             android:id="@+id/scope_select"
+	             android:layout_width="wrap_content"
+	             android:layout_height="fill_parent"
+	             android:entries="@array/search_scope" />
+	         <Spinner
+	             android:id="@+id/location"
+	             android:layout_width="wrap_content"
+	             android:layout_height="fill_parent"
+	             android:entries="@array/location_names" />
+	    </LinearLayout>	
+	    
+	    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	        android:orientation="horizontal" >
+	         <Spinner android:id="@+id/format"
+	             android:layout_width="wrap_content"
+	             android:layout_height="fill_parent"
+	             android:entries="@array/formatnames" />
+	         <Button android:layout_width="wrap_content"
+	             android:layout_height="fill_parent"
+	             android:text="@string/button_search"
+	             android:onClick="sendMessage" />
+	         <Button
+	             android:layout_width="wrap_content"
+	             android:layout_height="fill_parent"
+	             android:text="@string/button_clear" 
+	             android:onClick="clearForm" />
+	    </LinearLayout>
+	    
 	</LinearLayout>
-	
-
-</LinearLayout>
-
-<WebView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/webview"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:layout_below="@id/search_form"
+   
+	<WebView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/search_form"
     >
-</WebView>
-
-</RelativeLayout>
+    </WebView>
+ 
+ </RelativeLayout>

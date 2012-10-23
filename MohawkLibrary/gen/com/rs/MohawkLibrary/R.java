@@ -52,9 +52,9 @@ public final class R {
         public static final int chat=0x7f070003;
         public static final int collabblog=0x7f070006;
         public static final int edit_message=0x7f07000d;
-        public static final int format=0x7f07000f;
+        public static final int format=0x7f070010;
         public static final int hours=0x7f070008;
-        public static final int location=0x7f070010;
+        public static final int location=0x7f07000f;
         public static final int news=0x7f070004;
         public static final int opacSearch=0x7f070001;
         public static final int room_reserve=0x7f070007;
