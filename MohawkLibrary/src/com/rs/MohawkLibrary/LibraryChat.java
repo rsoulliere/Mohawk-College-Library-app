@@ -11,7 +11,7 @@ import android.webkit.WebViewClient;
 public class LibraryChat extends MenuActivity{
 
 	final Activity activity = this;
-	 WebView myWebView;
+	WebView myWebView;
 	
 	 public void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
@@ -30,19 +30,10 @@ public class LibraryChat extends MenuActivity{
       activity.setProgress(progress * 100);
 
       if(progress == 100)
-          activity.setTitle(R.string.opacSearch);
+          activity.setTitle(R.string.chat);
 	   }
 	 });
 	}
 	  
-	    @Override
-	    public boolean onKeyDown(int keyCode, KeyEvent event) {
-	    	 WebView myWebView = (WebView) findViewById(R.id.webview);
-	        if ((keyCode == KeyEvent.KEYCODE_BACK) && myWebView.canGoBack()) {
-	            myWebView.goBack();
-	            return true;
-	        }
-	        return super.onKeyDown(keyCode, event);
-	    }
 	    
 }

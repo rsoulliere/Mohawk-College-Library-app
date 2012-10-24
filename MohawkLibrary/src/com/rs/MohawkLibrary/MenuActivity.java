@@ -2,15 +2,16 @@ package com.rs.MohawkLibrary;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 import android.webkit.WebChromeClient.CustomViewCallback;
 
 public class MenuActivity extends Activity{
 
-	
    
 	 @Override
 		public boolean onCreateOptionsMenu(Menu menu) {
@@ -89,6 +90,14 @@ public class MenuActivity extends Activity{
 			
 		}
 	    
-	  
+		  @Override
+		    public boolean onKeyDown(int keyCode, KeyEvent event) {
+		    	 WebView myWebView = (WebView) findViewById(R.id.webview);
+		        if ((keyCode == KeyEvent.KEYCODE_BACK) && myWebView.canGoBack()) {
+		            myWebView.goBack();
+		            return true;
+		        }
+		        return super.onKeyDown(keyCode, event);
+		    }
 	
 }
