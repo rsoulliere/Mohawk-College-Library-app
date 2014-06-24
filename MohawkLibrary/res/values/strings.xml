@@ -4,6 +4,7 @@
      <string name="search">Find</string>
     <string name="opacSearch">Find Books and Videos</string>
      <string name="articleSearch">Find Journal Articles</string>
+     <string name="subjectguides">Subject Guides</string>
        <string name="news">Library News</string>
       <string name="chat">Chat</string>
       <string name="room_reserve">Book a Space</string>
@@ -12,7 +13,6 @@
          <string name="search_term">Enter search</string>
          <string name="button_search">Search</string>
          <string name="button_go">Go!</string>
-         <string name="libraryHours">Library Hours</string>
        <string name="button_clear">Clear</string>
          <string name="about">About this Application</string>
      
@@ -27,8 +27,6 @@
      
 	<string-array name="location_names">
         <item>all locations</item>
-        <item>BPL</item>
-        <item>Brantford</item>
         <item>Fennell</item>
         <item>IAHS</item>
         <item>STAART</item>
@@ -36,8 +34,6 @@
     
     <string-array name="location_codes">
         <item>1</item>
-        <item>105</item>
-        <item>104</item>
         <item>101</item>
         <item>102</item>
         <item>103</item>

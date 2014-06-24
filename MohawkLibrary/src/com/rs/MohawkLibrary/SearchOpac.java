@@ -21,6 +21,8 @@ import android.widget.Spinner;
 import android.widget.Toast;
 import android.widget.VideoView;
 import android.webkit.WebViewClient;
+import android.net.http.SslError;
+import android.webkit.SslErrorHandler;
 
 public class SearchOpac  extends MenuActivity {
 	
@@ -53,7 +55,7 @@ public class SearchOpac  extends MenuActivity {
     	String scope = String.valueOf(scope_spinner.getSelectedItem()).toString();
     	String location = getResources().getStringArray(R.array.location_codes)[location_spinner.getSelectedItemPosition()];
     	String format = getResources().getStringArray(R.array.format_codes)[format_spinner.getSelectedItemPosition()];
-    	String searchURL = "http://libcat.mohawkcollege.ca/eg/android/results?query=";
+    	String searchURL = "http://libcat.mohawkcollege.ca/eg/opac/results?query=";
     	String searchParams = message
  				.concat("&qtype=").concat(scope)
  				.concat("&fi%3Aitem_type=").concat(format)
@@ -93,6 +95,10 @@ public class SearchOpac  extends MenuActivity {
               return true;
           }
        	 
+         @Override
+         public void onReceivedSslError (WebView view, SslErrorHandler handler, SslError error) {
+             handler.proceed();
+         }
        	
 
        		   });     

@@ -45,6 +45,8 @@ public class MenuActivity extends Activity{
 	    		intent = new Intent(this, RoomReserve.class);
 	     		startActivity(intent);
 	 	    	break;
+	 	    	
+	    	
 		    	
 	    	case R.id.brainblog:
 	    		intent = new Intent(this, BrainBlog.class);
@@ -61,23 +63,17 @@ public class MenuActivity extends Activity{
 	    		intent = new Intent(this, LibraryChat.class);
 	    		startActivity(intent);
 		    	break;
-		    	
-	    	case R.id.hours:
-	    		intent = new Intent(this,HoursView.class);
-	    		startActivity(intent);
-		    	break;  
-		    	
+		     
 	    	case R.id.about:
 	    		intent = new Intent(this, MohawkLibrary.class);
 	     		startActivity(intent);
 	    	    	break;
+	    	    	
+	    	case R.id.subjectGuides:
+	    		intent = new Intent(this, Libguides.class);
+	     		startActivity(intent);
+	 	    	break;
 	 
-		    
-	  //  	case R.id.viewMap:
-		//    	Intent intent2 = new Intent(this, MapTest.class); 
-		//    	startActivity(intent2);
-		   // 	break;
-		    	
 		    	
 		    default:
 		        return super.onOptionsItemSelected(item);

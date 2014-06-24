@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="com.rs.MohawkLibrary"
-      android:versionCode="1"
-      android:versionName="1.0" >
+      android:versionCode="4"
+      android:versionName="3.2" >
       
-    <uses-sdk android:minSdkVersion="12" android:targetSdkVersion="15"/>
+    <uses-sdk android:minSdkVersion="12" android:targetSdkVersion="19"/>
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> 
 
@@ -13,8 +13,7 @@
 	    android:label="@string/app_name"
 	    android:hardwareAccelerated="true" 
 	   >
-
-        
+      
         <activity 
             android:name=".MohawkLibrary" 
             android:label="Mohawk College Library" 
@@ -47,6 +46,13 @@
                 android:label="@string/room_reserve" 
             android:configChanges="keyboardHidden|orientation|screenSize"
             ></activity>
+         
+         <activity android:name=".Libguides"
+                android:label="@string/subjectguides" 
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            >
+         </activity>
+         
          <activity android:name=".BrainBlog"
                 android:label="@string/brainblog" 
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -54,14 +60,6 @@
              <activity android:name=".CollabBlog"
                 android:label="@string/collabblog" 
             android:configChanges="keyboardHidden|orientation|screenSize"
-            ></activity>
-       
-         <activity android:name=".HoursView"
-                android:label="@string/libraryHours" 
-            android:configChanges="keyboardHidden|orientation|screenSize"
-             
-            ></activity>
-         
-            
+            ></activity>           
     </application>
 </manifest>

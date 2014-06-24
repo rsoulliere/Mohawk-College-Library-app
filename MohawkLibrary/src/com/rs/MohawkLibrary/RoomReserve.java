@@ -22,7 +22,7 @@ public class RoomReserve extends MenuActivity{
       myWebView.setInitialScale(100);
       myWebView.getSettings().setJavaScriptEnabled(true);
       myWebView.setWebViewClient(new WebViewClient());
-      myWebView.loadUrl("http://lib-drupal.mohawkcollege.ca/forms/Work/BookRoomMobile/mobile.php");
+      myWebView.loadUrl("http://mohawkcollege.ca.libcal.com/mobile.php");
       myWebView.setWebChromeClient(new WebChromeClient() {
        	
  	   public void onProgressChanged(WebView view, int progress) {

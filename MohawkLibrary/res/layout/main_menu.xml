@@ -13,6 +13,7 @@
         		android:title="@string/opacSearch"
         		android:icon="@drawable/searchopac"
          	 />
+          
 
      		<item android:id="@+id/articleSearch"
          		 android:title="@string/articleSearch"
@@ -21,7 +22,13 @@
         </menu>
         
        </item>
-    
+      
+	<item android:id="@+id/subjectGuides"
+         		 android:title="@string/subjectguides"
+          		android:icon="@drawable/subjectguides"
+          		 android:textSize="2pt"
+          		 android:showAsAction="always" 
+          		 />
     
     <item android:id="@+id/chat"
           android:title="@string/chat"
@@ -30,6 +37,8 @@
            android:showAsAction="always"  
           
           />
+    
+ 
     
      <item android:id="@+id/news"
           android:title="@string/news"
@@ -55,19 +64,11 @@
            android:textSize="2pt"
            android:showAsAction="always"   
           />
-        
-        <item android:id="@+id/hours"
-          android:title="@string/libraryHours"
-          android:showAsAction="never"  
-         />
-        
          <item android:id="@+id/about"
           android:title="@string/about"
           android:icon="@drawable/aboutapp"
           android:showAsAction="never"  
-         />
-        
-         
+         />      
     </menu>
 
 
